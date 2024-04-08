@@ -1,0 +1,233 @@
+body {
+	background: #EFEFBB;
+	background: linear-gradient(to right, #2c2c2c, #252525);
+	color: white;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+header > h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 54px;
+	font-weight: 800;
+	letter-spacing: 18px;
+	color: #ff524a;
+}
+
+header > small{
+	text-transform: uppercase;
+	font-size: 16px;
+	letter-spacing: 5px;
+}
+
+.container {
+	padding: 40px;
+	margin: 0 auto;
+}
+
+
+.pokedex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 20px;
+	padding-inline-start: 0;
+}
+
+.card {
+	list-style: none;
+	padding: 40px;
+	color: rgb(187, 187, 187);
+	text-align: center;
+	border-radius: 20px;
+	position: relative;
+	cursor: pointer;
+	opacity: .5;
+
+}
+
+.card::after {
+	content: "";
+  display: block;
+  width: 50%;
+  height: 45%;
+  border-radius: 100%;
+  /* background-color: #fff; */
+  opacity: .7;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+
+.steel {
+	background-color: #f4f4f4;
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.fire {
+	background: linear-gradient(45deg,#F5F5F5, rgb(255, 197, 197));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.grass {
+	background: linear-gradient(45deg,#DEFDE0, rgb(205, 233, 255));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.electric {
+	background: linear-gradient(45deg,#FCF7DE, rgb(167, 255, 248));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.water, .ice {
+	background: linear-gradient(45deg,#DEF3FD, rgb(167, 237, 255));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.ground {
+	background: linear-gradient(45deg,#f4e7da, rgb(204, 190, 179));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.rock {
+	background: linear-gradient(45deg,#d5d5d4, rgb(139, 139, 139));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.fairy {
+	background: linear-gradient(45deg,#fceaff, rgb(255, 255, 255));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.poison {
+	background: linear-gradient(45deg,#98d7a5, rgb(205, 167, 255));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.bug {
+	background: linear-gradient(45deg,#f8d5a3, rgb(205, 167, 255));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.dragon {
+	background: linear-gradient(45deg,#a17afd, rgb(66, 60, 64));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.psychic {
+	background: linear-gradient(45deg,#5b30d3, rgb(133, 0, 88));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.flying {
+	background-color: #F5F5F5;
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.fighting {
+	background: linear-gradient(45deg,#E6E0D4, rgb(133, 0, 88));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.normal {
+	background: linear-gradient(45deg,#F5F5F5, rgb(255, 255, 255));
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #44444433;
+}
+
+.card:hover {
+	animation: bounce 0.5s linear;
+	opacity: 1;
+}
+
+.card:hover > .card-image{
+	transition: all .5s ease-in-out;
+	box-shadow: 0px 0px 50px #FFFFFF44;
+	transform: rotateY(360deg);
+}
+
+.card-title {
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	font-size: 32px;
+	font-weight: 600;
+	position: relative;
+	z-index: 2;
+}
+
+.card-subtitle {
+	margin-top: 5px;
+	color: #666;
+	font-weight: lighter;
+	position: relative;
+	z-index: 2;
+}
+
+.card-image {
+	height: 180px;
+	position: relative;
+	z-index: 2;
+}
+
+@keyframes bounce {
+	20% {
+			transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
+}
+
+@media screen and (max-width: 414px) {
+	
+	header{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 40px;
+	}
+
+	header > h1 {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 34px;
+		font-weight: 800;
+		letter-spacing: 12px;
+		color: #ff524a;
+	}
+
+	header > small{
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+}
